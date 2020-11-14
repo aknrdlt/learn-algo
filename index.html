@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sdu.eng.kz</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="wrapper">
+            <div class="eng_logo">
+                <img width="160px" height="80px" src="images/logo.png" alt="Logo">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li class="active"><a href="#">About</a></li>
+                    <li><a href="#">Algorithms</a></li>
+                    <li><a href="#">Web Dev</a></li>
+                    <li><a href="#">Mobile Dev</a></li>
+                    <li><a href="#">System design</a></li>
+                </ul>
+            </div>
+            <div class="profile">
+                <div class="student_profile">
+                    <p id="user_name">Donald Trump</p>
+                    <img onclick="showInfo()" id="user_photo" src="images/ava.png" alt="">
+                    <img onclick="window.location.reload()" id="logout" src="images/logout.svg.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="okno">
+        
+    </div>
+    <div class="info">
+        <img src="images/close.svg" onclick="close_button()" style="position: relative; left: 320px;top: 10px; width:20px; height:20px; cursor: pointer;" alt="">
+        <div class="info_box">
+            <img style="width: 70px; height: 70px; border-radius: 50%; border: 2px solid black; margin-top: 40px; margin-left: 120px; margin-bottom: 30px;" src="images/ava.png" alt="">
+            <div class="form_info">
+                <p><strong>First name: </strong> John</p>
+                <p><strong>Last name: </strong> Shelbie</p>
+                <p id="info_id"></p>
+                </p>
+                <p><strong>GPA: </strong> 3.25</p>
+                <p><strong>Languages: </strong> Java, Python, C++</p>
+                <p><strong>Related techonolologies: </strong> Git, cmd, bash.</p>
+                <p><strong>Frameworks: </strong> ReactJS, JavaFX, Spring. </p>
+                <p><strong>Experiences: </strong> no</p>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="login">
+            <h5><a href="https://sdu.edu.kz/"><i>Suleyman Demirel University</i></a></h5>
+            <img src="images/logo.png" width="150px" height="70px" alt="Logo">
+            <p style="font-size: 26px;"><i>Hi engineer!</i></p>
+            <input id="username" type="text" style="margin-bottom: 9px;" placeholder="ID" maxlength="8" name="username">
+            <input id="parol" type="password" style="margin-bottom: 13px;" name="password" placeholder="Password"><br>
+            <a onclick="toRegister()" href="#" id="registr">Can't access!</a>
+            <button onclick="login(username.value, parol.value)" type="submit" class="btn btn-secondary">Continue</button>
+        </div>
+    </div>
+
+    <div class="access">
+        <div class="form">
+            <img src="images/logo.png" width="150px" height="70px" alt="Logo">
+            <h3><b>Fill the form!</b></h3>
+            <select name="course" id="course" width="150px">
+                <option value="0">Choose your course</option>
+                <option value="1">1 course</option>
+                <option value="2">2 course</option>
+                <option value="3">3 course</option>
+                <option value="4">4 course</option>
+            </select><br><br>
+            <select name="advisor" id="advisor_name">
+                <option value="0">Choose your advisor</option>
+                <option value="1">M. Bekbalanovna</option>
+                <option value="2">K. Kongratbayev</option>
+                <option value="3">U. Sadyk</option>
+                <option value="4">Zh. Rayev</option>
+            </select><br><br>
+            <input id="help_id" style="width: 170px;" type="text" style="margin-bottom: 9px;" placeholder="ID" maxlength="8" name="username" id="user"><br><br>
+            <div id="check" style="display: none;color: red">Check your SDU mail! <img id="load" onclick="window.location.reload()" src="images/arrow.jpg" alt=""></div>
+            <button id="sub" type="button" onclick="letter(course.value, advisor_name.value, help_id.value)" class="btn btn-success">Submit</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

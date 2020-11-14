@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/backOne.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    font-size: 16px;
+    font-family: "Source Sans Pro", Arial, serif;
+    overflow: hidden;
+}
+
+.okno {
+    color: #fff;
+    display: none;
+    font-size: 22px;
+}
+
+.header {
+    display: none;
+    opacity: 0;
+    background-color: #fff;
+}
+
+.wrapper {
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.wrapper {
+    align-items: center;
+}
+
+.student_profile>* {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.6s;
+}
+
+ul li a:hover {
+    color: rgb(194, 26, 26);
+}
+
+ul li.active a {
+    color: rgb(187, 24, 24);
+}
+
+.profile {
+    position: absolute;
+    right: 20px;
+}
+
+.student_profile {
+    display: flex;
+    margin-top: 9px;
+}
+
+#user_photo {
+    height: 40px;
+    width: 40px;
+}
+
+#user_name{
+    display: inline;
+}
+
+#logout {
+    height: 40px;
+    width: 40px;
+}
+
+.form_info {
+    margin-left: 30px;
+    display: inline;
+}
+
+.info_box {
+    display: inline;
+}
+
+.info {
+    display: none;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 120px;
+    border-radius: 2%;
+    background-color: white;
+    width: 350px;
+}
+
+.box {
+    display: inline;
+    z-index: 2;
+}
+
+.login {
+    background-color: white;
+    margin: 0 auto;
+    width: 350px;
+    opacity: 0.9;
+    height: 320px;
+    text-align: center;
+    margin-top: 200px;
+    border-radius: 2%;
+    padding: 20px;
+    border: 2px solid black;
+}
+
+#registr {
+    margin-right: 15px;
+}
+
+.access {
+    display: none;
+}
+
+.form {
+    background-color: white;
+    margin: 0 auto;
+    border: 2px solid black;
+    width: 350px;
+    opacity: 0.9;
+    height: 330px;
+    margin-top: 200px;
+    text-align: center;
+    border-radius: 2%;
+    padding: 20px;
+}
+
+#load {
+    width: 23px;
+    height: 20px;
+    cursor: pointer;
+}
