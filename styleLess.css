@@ -1,0 +1,43 @@
+.bc {
+  background-color: white;
+}
+body {
+  overflow: hidden;
+}
+ul {
+  list-style: none;
+  margin-top: 15px;
+}
+ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+ul li a {
+  color: #140a69;
+  transition: 0.9s;
+}
+ul li a:hover {
+  color: #6151ee;
+}
+ul .active a {
+  color: #6151ee;
+}
+.access,
+.info,
+.header {
+  display: none;
+}
+.form_info,
+.info_box,
+.box {
+  display: inline;
+}
+.student_profile,
+.wrapper {
+  display: flex;
+}
+.info,
+.login,
+.form {
+  background-color: white;
+}

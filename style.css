@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/backOne.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    font-size: 16px;
+    font-family: "Source Sans Pro", Arial, serif;
+}
+
+@media(max-width: 1300px){
+    #user_name{
+        display: none;
+    }
+}
+
+.ic{
+    display: none;
+}
+
+@media(max-width: 600px){
+    .eng_logo{
+        display: none;
+    }
+    body{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/biForPhone.jpg);
+    }
+
+    #myLinks{
+        display: none;
+    }
+
+    .ic{
+        display: inline;
+    }
+}
+
+.header {
+    opacity: 0;
+    background-color: #fff;
+}
+
+.wrapper {
+    left: 20px;
+    margin-right: 20px;
+    font-size: 22px;
+    font-weight: 600;
+    align-items: center;
+}
+
+.student_profile>* {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.profile {
+    position: absolute;
+    right: 20px;
+}
+
+.student_profile {
+    margin-top: 9px;
+}
+
+#user_photo, #burgericon {
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+#burger{
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-bottom: 10px ;
+}
+
+#logout {
+    height: 37px;
+    width: 40px;
+}
+
+.form_info {
+    margin-left: 30px;
+}
+
+.info {
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 120px;
+    border-radius: 2%;
+    width: 350px;
+}
+
+.login {
+    margin: 0 auto;
+    width: 350px;
+    opacity: 0.9;
+    height: 320px;
+    text-align: center;
+    margin-top: 200px;
+    border-radius: 2%;
+    padding: 20px;
+    border: 2px solid black;
+}
+
+#registr {
+    margin-right: 15px;
+}
+
+.form {
+    margin: 0 auto;
+    border: 2px solid black;
+    width: 350px;
+    opacity: 0.9;
+    height: 330px;
+    margin-top: 200px;
+    text-align: center;
+    border-radius: 2%;
+    padding: 20px;
+}
+
+#load {
+    width: 23px;
+    height: 20px;
+    cursor: pointer;
+}
+
+
+
+#section1 {
+    height: auto;
+    background-color: wheat;
+}
+
+#section2 {
+    text-align: center;
+    height: auto;
+    background-color: wheat;
+    padding-top: 100px;
+}
+
+#section3 {
+    height: auto;
+    background-color: wheat;
+}
+
+.inside-container{
+    margin: 20px;
+}
+
+.main-container{
+    display: none;
+}
+
+.sorting{
+    display: inline-block;
+    margin: 20px;
+}
+
+.book-store{
+    display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   padding-bottom: 100px;
+}
+
+.book{
+    height: 280px;;
+    width: 200px;
+    background-color: #fff;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+.book>img{
+    width: 180px;
+    height: 220px;
+    margin: 10px;
+}
+

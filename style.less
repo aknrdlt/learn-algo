@@ -1,0 +1,57 @@
+@hide: hidden;
+
+.display(@type){
+  display: @type;
+}
+
+.bc{
+  background-color: white;
+}
+
+body {
+  overflow: @hide;
+}
+ul {
+  list-style: none;
+  margin-top: 15px;
+  li {
+    display: inline-block;
+    margin-right: 20px;
+    a {
+      color: #140a69;
+      transition: 0.9s;
+      &:hover {
+        color: #6151ee;
+      }
+    }
+  }
+  .active a {
+    color: #6151ee;
+  }
+}
+.access,
+.info,
+.header{
+  .display(none);
+}
+.form_info,
+.info_box,
+.box {
+  .display(inline)
+}
+.student_profile,
+.wrapper {
+  .display(flex)
+}
+.info,
+.login,
+.form{
+  .bc;
+}
+
+.loop(@count) when (@count > 0){
+  .loop(@count - 1);
+  .video@{count}{
+    display:none;
+  }
+}
