@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en"> 
+ -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sdu.eng.kz</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="styleLess.css">
+    <!-- <link rel="stylesheet" href="styleLess.css"> -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnMj8Xc5_jA0tqVHCoFHCk-2sHt4imItA&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
 </head>
 
 <body>
@@ -25,7 +30,7 @@
                 <div class="student_profile">
                     <p id="user_name">Donald Trump</p>
                     <img onclick="showInfo()" id="user_photo" src="images/ava.png" alt="">
-                    <img onclick="window.location.reload()" id="logout" src="images/logout.svg.png" alt="">
+                    <img onclick="logout()" id="logout" src="images/logout.svg.png" alt="">
                 </div>
             </div>
                 <div class="eng_logo">
@@ -39,23 +44,6 @@
                     </ul>
                 </div>
             </div>
-    </div>
-    <div class="info">
-        <img src="images/close.svg" onclick="close_button()" style="position: relative; left: 320px;top: 10px; width:20px; height:20px; cursor: pointer;" alt="">
-        <div class="info_box">
-            <img style="width: 70px; height: 70px; border-radius: 50%; border: 2px solid black; margin-top: 40px; margin-left: 120px; margin-bottom: 30px;" src="images/ava.png" alt="">
-            <div class="form_info">
-                <p><strong>First name: </strong> John</p>
-                <p><strong>Last name: </strong> Shelbie</p>
-                <p id="info_id"></p>
-                </p>
-                <p><strong>GPA: </strong> 3.25</p>
-                <p><strong>Languages: </strong> Java, Python, C++</p>
-                <p><strong>Related techonolologies: </strong> Git, cmd, bash.</p>
-                <p><strong>Frameworks: </strong> ReactJS, JavaFX, Spring. </p>
-                <p><strong>Experiences: </strong> no</p>
-            </div>
-        </div>
     </div>
     <div class="box">
         <div class="login">
@@ -92,21 +80,38 @@
             <button id="sub" type="button" onclick="letter(course.value, advisor_name.value, help_id.value)" class="btn btn-success">Submit</button>
         </div>
     </div>
-
+    <div class="info">
+        <img class="closed" src="images/close.svg" onclick="close_button()" style="position: relative; left: 320px;top: 10px; width:20px; height:20px; cursor: pointer;" alt="">
+        <div class="info_box">
+            <img style="width: 70px; height: 70px; border-radius: 50%; border: 2px solid black; margin-top: 40px; margin-left: 120px; margin-bottom: 30px;" src="images/ava.png" alt="">
+            <div class="form_info">
+                <p><strong>First name: </strong> John</p>
+                <p><strong>Last name: </strong> Shelbie</p>
+                <p id="info_id"></p>
+                </p>
+                <p><strong>GPA: </strong> 3.25</p>
+                <p><strong>Languages: </strong> Java, Python, C++</p>
+                <p><strong>Related techonolologies: </strong> Git, cmd, bash.</p>
+                <p><strong>Frameworks: </strong> ReactJS, JavaFX, Spring. </p>
+                <p><strong>Experiences: </strong> no</p>
+            </div>
+        </div>
+    </div>
     <div class="main-container">
+
         <div class="inside-container">
             
             <div id="section1">
                 <div class="list-of-topics">
                 <a href="#section1">Sorting Algorithms</a><br>
-                <a href="#section1">Data Structures</a><br>
-                <a href="#section1">Problem Solving</a><br>
-                <a href="#section2">Recommended Books</a><br>
-                <a href="#section3">Recommended Websites</a>
-            </div>
-                <h2>Sorting Algorithms</h2>
+                <a href="#section2">Data Structures</a><br>
+                <a href="#section3">Problem Solving</a><br>
+                <a href="#section4">Recommended Books</a><br>
+                <a href="#section5">Recommended Websites</a>
+                </div>
 
                 <div class="sorting">
+                    <h2>Sorting Algorithms</h2>
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/KF2j-9iSf4Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="float: left; margin-right: 10px; margin-bottom: 5px;"></iframe>
                         <h3>Merge Sort</h3>
                         <p><strong>Time Complexity:</strong> Sorting arrays on different machines. Merge Sort is a recursive algorithm and time complexity can be expressed as following recurrence relation.&nbsp;<br>T(n) = 2T(n/2) + θ(n)</p>
@@ -124,9 +129,35 @@
                         <pre> T(n) = 2T(n/2) + <img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-a372b7ef1ffaec3b4ad80e0141550990_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="\theta" title="Rendered by QuickLaTeX.com" height="19" width="11" style="vertical-align: 0px;">(n)</pre><p>The solution of above recurrence is <img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-a372b7ef1ffaec3b4ad80e0141550990_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="\theta" title="Rendered by QuickLaTeX.com" height="19" width="11" style="vertical-align: 0px;">(nLogn). It can be solved using case 2 of <a href="http://en.wikipedia.org/wiki/Master_theorem" target="_blank">Master Theorem</a>.</p></p>
             </div>
             </div>
-            <h2>Problem Solving</h2>
-            <iframe src="https://trinket.io/embed/python/3d8d7ce66b" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-            <div id="section2">
+            <div id="section3">
+                <h2>Problem Solving</h2>
+                <div><p>Given two strings <em>s</em> and <em>t&nbsp;</em>, write a function to determine if <em>t</em> is an anagram of <em>s</em>.</p>
+
+                    <p><b>Example 1:</b></p>
+                    
+                    <p><b>Input:</b> <em>s</em> = "anagram", <em>t</em> = "nagaram" <br>
+                    <b>Output:</b> true
+                    </p>
+                    
+                    <p><b>Example 2:</b></p>
+                    
+                    <p><b>Input:</b> <em>s</em> = "rat", <em>t</em> = "car" <br>
+                    <b>Output: </b>false
+                    </p>
+                    
+                    <p><strong>Note:</strong><br>
+                    You may assume the string contains only lowercase alphabets.</p>
+                    
+                    <p><strong>Follow up:</strong><br>
+                    What if the inputs contain unicode characters? How would you adapt your solution to such case?</p>
+                    </div>
+                    <iframe src="https://trinket.io/embed/python/3d8d7ce66b" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                    <p><h4>Additonal problems:</h4></p>
+                    <button type="button" class="btn btn-primary" onclick="window.location='https://leetcode.com/problems/single-number/'">136. Single Number</button> 
+                    <button type="button" onclick="window.location='https://leetcode.com/problems/squares-of-a-sorted-array/'" class="btn btn-primary">977. Squares of Sorted Arrays</button>
+                    <button type="button" onclick="window.location='https://leetcode.com/problems/to-lower-case/'" class="btn btn-primary">709.to Lower Case</button>
+            </div>
+            <div id="section4">
                 <h2>Recommended Books</h2>
                 <div class="book-store">
                     <div class="book">
@@ -147,8 +178,52 @@
                     </div>
                 </div>
             </div>
-            <div id="section3">
+            <div id="section5">
                 <h2>Recommended Websites</h2>
+                <div class="site-links">
+                   <div>
+                       <img style="width: 150px; height: 30px;" src="images/acmp.png" alt="">
+                       <p class="p-acmp"><a href="acmp.ru">acmp.com</a> - actually website for beginner, who wants to understand algorithms.</p>
+                   </div>
+                   <div >
+                        <img style="width: 150px; height: 25px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Codeforces_logo.svg/1200px-Codeforces_logo.svg.png" alt="">
+                        <p class="p-cf"><a href="codeforces.com">codeforces.com</a> - mostly for  competitive programmers. Weekly contests for various divisions(div1, div2, div3), with rating.</p>
+                   </div>
+                   <div>
+                        <img style="width: 130px; height: 30px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/LeetCode_Logo_black_with_text.svg/1024px-LeetCode_Logo_black_with_text.svg.png" alt="">
+                        <p class="p-leetcode"><a href="leetcode.com">leetcode.com</a> very interesting problems. Mainly concentrated on technical interviewing.</p>
+                   </div>
+                   <div>
+                        <img style="width: 100px; height: 50px;" src="https://seekvectorlogo.com/wp-content/uploads/2019/01/coursera-vector-logo.png" alt="">
+                        <p class="p-course"><a href="coursera.com">coursera.com  </a> - online courses. Recommended to watch <a href="https://www.coursera.org/learn/algorithms-part1">Robert Sedgewick, Kevin Wayne.                        </a></p>
+                   </div>
+                </div>
+            </div>
+            <div id="section6">
+                <div class="section-footer">
+                <div class="footer">
+                    <div class="contacts">
+                        <h2 id="cont">Contact Us</h2>
+                        <div class="insta-class">
+                            <img id="inst-logo" src="https://www.jansushi.kz/images/footer__insta.png" alt="">
+                            @sdu.kz
+                        </div>
+                        <div class="site-class">
+                            <img id="site-logo" src="images/site.png" alt=""> www.sdu.edu.kz
+                        </div> 
+                        <div class="phone-class">
+                            <img id="phone-logo" src="https://www.jansushi.kz/images/phone.png" alt="">+7 (727) 307 95 65
+                        </div>
+                        <div class="address-class">
+                            <img src="https://www.jansushi.kz/images/map.png" alt=""> Abylaikhan 1/1, Kaskelen, Almaty
+                        </div>
+                        <div class="github-class">
+
+                        </div>
+                    </div>
+                    <div id="map"></div>
+                </div>
+                </div>
             </div>
         </div>
     </div>
