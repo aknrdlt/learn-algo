@@ -1,13 +1,13 @@
 function login(name, parol) {
-  if(name.length == 9 && parol.length > 0){
-    document.querySelector(".header").style.display = "flex";
-    document.querySelector(".main-container").style.display = "inline";
-    document.getElementById("user_name").innerHTML = name + "@stu.sdu.edu.kz";
-    document.querySelector("body").style.backgroundImage = "none";
-    document.querySelector("body").style.overflow = "scroll";
-    $(".header").animate({ opacity: "1" }, "slow");
-    document.querySelector(".box").style.display = "none";
-    document.getElementById("info_id").innerHTML = "ID: ".bold() + name;
+    if(name.length == 9 && parol.length == 6){
+      document.querySelector(".header").style.display = "flex";
+      document.querySelector(".main-container").style.display = "inline";
+      document.getElementById("user_name").innerHTML = name + "@stu.sdu.edu.kz";
+      document.querySelector("body").style.backgroundImage = "none";
+      document.querySelector("body").style.overflow = "scroll";
+      $(".header").animate({ opacity: "1" }, "slow");
+      document.querySelector(".box").style.display = "none";
+      document.getElementById("info_id").innerHTML = "ID: ".bold() + name;
     }else if(name.length != 9 && parol.length == 0){
        document.getElementById("username").style.borderColor = "red";
        document.getElementById("parol").style.borderColor = "red";
