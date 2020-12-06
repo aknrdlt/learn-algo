@@ -1,11 +1,6 @@
-* {
-    margin: 0;
-}
-
 body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/backOne.jpg);
     background-repeat: no-repeat;
-    background-color: none;
     background-size: cover;
     height: 100vh;
     font-size: 16px;
@@ -40,8 +35,20 @@ body {
 }
 
 .header {
+    border-bottom:3px solid #000;
     opacity: 0;
     background-color: #fff;
+}
+
+.list-of-topics{
+    display: flex;
+    justify-content: space-around;
+}
+
+.list-of-topics>a{
+    color:#000;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .wrapper {
@@ -134,8 +141,6 @@ body {
     cursor: pointer;
 }
 
-
-
 #section1 {
     height: auto;
     background-color: white;
@@ -154,6 +159,7 @@ body {
 
 #section5 {
     padding: 20px;
+    text-align: center;
     height: auto;
     background-color: white;
 }
@@ -163,14 +169,10 @@ body {
     height: auto;
     background-color: white;
 }
-
-.inside-container{
-    margin: 20px;
-}
-
 .main-container{
     display: none;
     position: absolute; 
+    margin-top: 20px;
 }
 
 .sorting{
@@ -202,9 +204,20 @@ body {
     margin: 10px;
 }
 
-.site-links>div{
-    display: flex;
+.site-links{
     height: auto;
+    text-align: center;
+}
+
+.site-links>div{
+    margin-bottom: 20px;
+    border-bottom: 3px solid black;
+}
+
+.site-links>div>p>a{
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .p-acmp{
@@ -232,23 +245,23 @@ body {
     width: 500px;
   }
 
-  .contacts>div>img{
-      height: 30px;
-      width: 30px;
-  }
+.contacts>div>img{
+    height: 30px;
+    width: 30px;
+}
 
-  .footer{
-      display:flex ;
-      flex-wrap: wrap;
-      justify-content: center;
-      text-align: center;
-  }
+.footer{
+    display:flex ;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
 
-  .section-footer{
-      height: auto;
-      justify-content: center;
-      text-align: center;
-  }
+.section-footer{
+    height: auto;
+    justify-content: center;
+    text-align: center;
+}
 .contacts{
     margin-right: 20px;
 }
