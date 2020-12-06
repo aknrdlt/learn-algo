@@ -49,7 +49,7 @@
             <h5><a href="https://sdu.edu.kz/"><i>Suleyman Demirel University</i></a></h5>
             <img src="images/logo.png" width="150px" height="70px" alt="Logo">
             <p style="font-size: 26px;"><i>Hi engineer!</i></p>
-            <input id="username" type="text" style="margin-bottom: 9px;" placeholder="ID" maxlength="8" name="username">
+            <input id="username" type="text" style="margin-bottom: 9px;" placeholder="ID" maxlength="9" name="username">
             <input id="parol" type="password" style="margin-bottom: 13px;" name="password" placeholder="Password"><br>
             <a onclick="toRegister()" href="#" id="registr">Can't access!</a>
             <button onclick="login(username.value, parol.value)" type="submit" class="btn btn-secondary">Continue</button>
@@ -110,26 +110,26 @@
                 </div>
 
                 <div class="sorting">
-                    <h2>Sorting Algorithms</h2>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/KF2j-9iSf4Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="float: left; margin-right: 10px; margin-bottom: 5px;"></iframe>
+                    <h2 style="text-align: center; font-weight: bold; margin: 20px;">Sorting Algorithms</h2>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/KF2j-9iSf4Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="float: left; margin-right: 20px; margin-bottom: 5px;"></iframe>
                         <h3>Merge Sort</h3>
                         <p><strong>Time Complexity:</strong> Sorting arrays on different machines. Merge Sort is a recursive algorithm and time complexity can be expressed as following recurrence relation.&nbsp;<br>T(n) = 2T(n/2) + θ(n)</p>
                         <p>The above recurrence can be solved either using the Recurrence Tree method or the Master method. It falls in case II of Master Method and the solution of the recurrence is θ(nLogn).&nbsp;Time complexity of Merge Sort is &nbsp;θ(nLogn) in all 3 cases (worst, average and best) as merge sort always divides the array into two halves and takes linear time to merge two halves.<br><strong>Auxiliary Space:</strong> O(n)<br><strong>Algorithmic Paradigm: </strong>Divide and Conquer<br><strong>Sorting In Place:</strong> No in a typical implementation<br><strong>Stable:</strong> Yes</p>
                 </div>
                 
                 <div class="sorting">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/SLauY6PpjW4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="float: left; margin-right: 10px; margin-bottom: 5px;"></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/SLauY6PpjW4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="float: left; margin-right: 20px; margin-bottom: 5px;"></iframe>
                     <h3>Quick Sort</h3>
                    <p><strong>Analysis of QuickSort</strong>
                         Time taken by QuickSort in general can be written as following. </p>
                         <p><m><strong>Worst Case:</strong></m>  The worst case occurs when the partition process always picks greatest or smallest element as pivot. If we consider above partition strategy where last element is always picked as pivot, the worst case would occur when the array is already sorted in increasing or decreasing order.  Following is recurrence for worst case. </p><pre> T(n) = T(k) + T(n-k-1) + <img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-a372b7ef1ffaec3b4ad80e0141550990_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="\theta" title="Rendered by QuickLaTeX.com" height="19" width="11" style="vertical-align: 0px;">(n)</pre>
                         <p>The solution of above recurrence is <img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-a372b7ef1ffaec3b4ad80e0141550990_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="\theta" title="Rendered by QuickLaTeX.com" height="19" width="11" style="vertical-align: 0px;">(n<sup>2</sup>).</p>
                         <p><em><strong>Best Case:</strong></em>  The best case occurs when the partition process always picks the middle element as pivot. Following is recurrence for best case. </p>
-                        <pre> T(n) = 2T(n/2) + <img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-a372b7ef1ffaec3b4ad80e0141550990_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="\theta" title="Rendered by QuickLaTeX.com" height="19" width="11" style="vertical-align: 0px;">(n)</pre><p>The solution of above recurrence is <img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-a372b7ef1ffaec3b4ad80e0141550990_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="\theta" title="Rendered by QuickLaTeX.com" height="19" width="11" style="vertical-align: 0px;">(nLogn). It can be solved using case 2 of <a href="http://en.wikipedia.org/wiki/Master_theorem" target="_blank">Master Theorem</a>.</p></p>
+                        <pre> T(n) = 2T(n/2) + <img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-a372b7ef1ffaec3b4ad80e0141550990_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="\theta" title="Rendered by QuickLaTeX.com" height="19" width="11" style="vertical-align: 0px;">(n)</pre></p>
             </div>
             </div>
             <div id="section3">
-                <h2>Problem Solving</h2>
+                <h2 style="text-align: center; font-weight: bold;">Problem Solving</h2>
                 <div><p>Given two strings <em>s</em> and <em>t&nbsp;</em>, write a function to determine if <em>t</em> is an anagram of <em>s</em>.</p>
 
                     <p><b>Example 1:</b></p>
@@ -157,7 +157,7 @@
                     <button type="button" onclick="window.location='https://leetcode.com/problems/to-lower-case/'" class="btn btn-primary">709.to Lower Case</button>
             </div>
             <div id="section4">
-                <h2>Recommended Books</h2>
+                <h2 style="font-weight: bold;">Recommended Books</h2>
                 <div class="book-store">
                     <div class="book">
                         <img src="images/book1.jpeg" alt="">
@@ -178,14 +178,14 @@
                 </div>
             </div>
             <div id="section5">
-                <h2>Recommended Websites</h2>
+                <h2 style="font-weight: bold;">Recommended Websites</h2>
                 <div class="site-links">
                    <div>
-                       <img style="width: 150px; height: 30px;" src="images/acmp.png" alt="">
+                       <img style="width: 180px; height: 30px;" src="images/acmp.png" alt="">
                        <p class="p-acmp"><a href="acmp.ru">acmp.com</a> - actually website for beginner, who wants to understand algorithms.</p>
                    </div>
                    <div >
-                        <img style="width: 150px; height: 25px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Codeforces_logo.svg/1200px-Codeforces_logo.svg.png" alt="">
+                        <img style="width: 150px; height: 20px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Codeforces_logo.svg/1200px-Codeforces_logo.svg.png" alt="">
                         <p class="p-cf"><a href="codeforces.com">codeforces.com</a> - mostly for  competitive programmers. Weekly contests for various divisions(div1, div2, div3), with rating.</p>
                    </div>
                    <div>
@@ -193,7 +193,7 @@
                         <p class="p-leetcode"><a href="leetcode.com">leetcode.com</a> very interesting problems. Mainly concentrated on technical interviewing.</p>
                    </div>
                    <div>
-                        <img style="width: 100px; height: 50px;" src="https://seekvectorlogo.com/wp-content/uploads/2019/01/coursera-vector-logo.png" alt="">
+                        <img style="width: 100px; height: 60px;" src="https://seekvectorlogo.com/wp-content/uploads/2019/01/coursera-vector-logo.png" alt="">
                         <p class="p-course"><a href="coursera.com">coursera.com  </a> - online courses. Recommended to watch <a href="https://www.coursera.org/learn/algorithms-part1">Robert Sedgewick, Kevin Wayne.                        </a></p>
                    </div>
                 </div>
@@ -202,7 +202,7 @@
                 <div class="section-footer">
                 <div class="footer">
                     <div class="contacts">
-                        <h2 id="cont">Contact Us</h2>
+                        <h2 style="font-weight: bold;" id="cont">Contact Us</h2>
                         <div class="insta-class">
                             <img id="inst-logo" src="https://www.jansushi.kz/images/footer__insta.png" alt="">
                             @sdu.kz
