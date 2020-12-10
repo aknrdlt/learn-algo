@@ -26,30 +26,32 @@ function showInfo() {
       
 }
 
+function login(name, parol) {
+  if(name.length == 9 && parol == '456'){
+    document.querySelector(".header").style.display = "flex";
+    document.querySelector(".main-container").style.display = "inline";
+    document.getElementById("user_name").innerHTML = name + "@stu.sdu.edu.kz";
+    document.querySelector("body").style.backgroundImage = "none";
+    document.querySelector("body").style.overflow = "scroll";
+    $(".header").animate({ opacity: "1" }, "slow");
+    document.querySelector(".box").style.display = "none";
+    document.getElementById("info_id").innerHTML = "ID: ".bold() + name;
+  }else if(name.length != 9 && parol.length == 0){
+     document.getElementById("username").style.borderColor = "red";
+     document.getElementById("parol").style.borderColor = "red";
+  }else if(parol.length == 0){
+     document.getElementById("parol").style.borderColor = "red";
+  }else if(username.length != 9){
+     document.getElementById("username").style.borderColor = "red";
+  }
+}
+
 function close_button() {
     $(".info").animate({opacity: "0"}, "slow");
     document.querySelector(".info").style.display = "none";
     document.body.style.overflow = "scroll";
 }
-function login(name, parol) {
-    if(name.length == 9 && parol == '456'){
-      document.querySelector(".header").style.display = "flex";
-      document.querySelector(".main-container").style.display = "inline";
-      document.getElementById("user_name").innerHTML = name + "@stu.sdu.edu.kz";
-      document.querySelector("body").style.backgroundImage = "none";
-      document.querySelector("body").style.overflow = "scroll";
-      $(".header").animate({ opacity: "1" }, "slow");
-      document.querySelector(".box").style.display = "none";
-      document.getElementById("info_id").innerHTML = "ID: ".bold() + name;
-    }else if(name.length != 9 && parol.length == 0){
-       document.getElementById("username").style.borderColor = "red";
-       document.getElementById("parol").style.borderColor = "red";
-    }else if(parol.length == 0){
-       document.getElementById("parol").style.borderColor = "red";
-    }else if(username.length != 9){
-       document.getElementById("username").style.borderColor = "red";
-    }
-}
+
 function myFunction() {
     var x = document.getElementById("myLinks");
     if (x.style.display === "block") {
@@ -121,11 +123,38 @@ function initMap() {
       { lat: 43.209758760714934, lng:76.67032158734072}
     ];
     const terrSdu = new google.maps.Polyline({
-      path: coorSdu,
+      path: coorSdu,  
       geodesic: true,
       strokeColor: "red",
       strokeOpacity: 1.0,
       strokeWeight: 2,
     });
     terrSdu.setMap(map);
+}
+
+function problem(){
+  document.getElementById('problem').style.color = "#6151ee";
+  document.getElementById('sort').style.color= "#140a69";
+  document.getElementById('book').style.color= "#140a69";
+  document.getElementById('website').style.color= "#140a69";
+}
+
+function sort(){
+  document.getElementById('problem').style.color = "#140a69";
+  document.getElementById('sort').style.color= "#6151ee";
+  document.getElementById('book').style.color= "#140a69";
+  document.getElementById('website').style.color= "#140a69";
+}
+function book(){
+  document.getElementById('problem').style.color = "#140a69";
+  document.getElementById('sort').style.color= "#140a69";
+  document.getElementById('book').style.color= "#6151ee";
+  document.getElementById('website').style.color= "#140a69";
+}
+
+function websites(){
+  document.getElementById('problem').style.color = "#140a69";
+  document.getElementById('sort').style.color= "#140a69";
+  document.getElementById('book').style.color= "#140a69";
+  document.getElementById('website').style.color= "#6151ee";
 }
