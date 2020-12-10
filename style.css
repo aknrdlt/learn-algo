@@ -44,8 +44,15 @@ body {
 
 .header {
     border-bottom:3px solid #000;
-    opacity: 0;
     background-color: #fff;
+    z-index: 9999;
+    position: fixed; 
+    left: 0; 
+    top: 0; 
+    width: 100%;
+}
+.sorting h2{
+    padding-top: 50px;
 }
 
 .list-of-topics{
@@ -262,7 +269,7 @@ body {
 .footer{
     display:flex ;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     text-align: center;
 }
 
@@ -281,7 +288,12 @@ body {
 .contacts>div>img{
     margin-right: 5px;
 }
-
+.book{
+    transition:all ease 0.5s;
+}
+.book:hover{
+    transform:scale(1.1);    
+}
 .contacts>div{
     text-align: left;
     margin-top: 20px;
